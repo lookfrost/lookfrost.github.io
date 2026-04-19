@@ -324,6 +324,11 @@ h3 {
   object-position: 42% 62%;
 }
 
+.profile-fallback {
+  position: relative;
+  z-index: 1;
+}
+
 .quick-facts {
   margin: 0;
   padding: 0;
