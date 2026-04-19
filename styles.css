@@ -482,6 +482,28 @@ h3 {
   gap: 24px;
 }
 
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.post-listing {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.post-listing .button-link {
+  align-self: flex-start;
+}
+
+.muted-post {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
+    var(--panel);
+}
+
 .post-meta {
   margin: 0 0 10px;
   color: var(--accent);
@@ -559,7 +581,8 @@ h3 {
   .contact-panel,
   .card-grid,
   .strength-grid,
-  .future-layout {
+  .future-layout,
+  .posts-grid {
     grid-template-columns: 1fr;
   }
 
