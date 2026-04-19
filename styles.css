@@ -95,6 +95,10 @@ body::before {
 .brand-photo-mark {
   overflow: hidden;
   background: rgba(255, 255, 255, 0.08);
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
 }
 
 .brand-photo {
