@@ -303,12 +303,36 @@ h3 {
   background: linear-gradient(135deg, rgba(144, 243, 206, 0.96), rgba(255, 213, 135, 0.92));
   color: #071211;
   box-shadow: inset 0 0 28px rgba(255, 255, 255, 0.35);
+  overflow: hidden;
 }
 
 .portrait-core span {
   font-family: "Space Grotesk", sans-serif;
   font-size: clamp(2.2rem, 6vw, 4rem);
   font-weight: 700;
+}
+
+.profile-photo-shell {
+  position: relative;
+}
+
+.profile-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 240ms ease;
+}
+
+.profile-photo.is-loaded {
+  opacity: 1;
+}
+
+.profile-fallback {
+  position: relative;
+  z-index: 1;
 }
 
 .quick-facts {
