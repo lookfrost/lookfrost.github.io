@@ -36,13 +36,20 @@ const profileImage = document.querySelector("[data-profile-image]");
 const profileFallback = document.querySelector("[data-profile-fallback]");
 
 if (profileImage && profileFallback) {
-  profileImage.addEventListener("load", () => {
+  const showProfileImage = () => {
     profileImage.classList.add("is-loaded");
     profileFallback.hidden = true;
-  });
+  };
 
   profileImage.addEventListener("error", () => {
     profileImage.removeAttribute("src");
     profileFallback.hidden = false;
   });
+
+  profileImage.addEventListener("load", showProfileImage);
+
+  // Cached images may finish loading before listeners are attached.
+  if (profileImage.complete && profileImage.naturalWidth > 0) {
+    showProfileImage();
+  }
 }
