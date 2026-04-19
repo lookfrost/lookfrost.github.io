@@ -1,0 +1,9 @@
+{
+  "name": "ilyas-cv-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal CV website with room for future blog posts.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
